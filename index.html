@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+   <header>
+        <h1>Event Management System</h1>
+        <nav>
+            <ul>
+                <li><button id="btnRegister">Register</button></li>
+                <li><button id="btnCreateEvent">Create Event</button></li>
+               <li><button id="btnManageEvents">Manage Events</button></li>
+
+                <li><button id="btnViewEvents">View Events</button></li>
+<li><button id="btnBuyTicket">Buy Ticket</button></li>
+
+                <li><button id="btnPromoteEvent">Promote Event</button></li>
+                                <li><button id="btnViewPromotions">View Promotions</button></li>
+<li><button id="btnManageAttendees">Manage Attendees</button></li>
+
+                            </ul>
+        </nav>
+    </header>
+
+    <section id="registrationSection" class="hidden">
+        <h2>User Registration</h2>
+        <form id="registrationForm">
+            <label for="username">Username:</label>
+            <input type="text" id="username" required><br><br>
+            <label for="email">Email:</label>
+            <input type="email" id="email" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" required><br><br>
+            <button type="submit">Register</button>
+        </form>
+    </section>
+
+    <section id="createEventSection" class="hidden">
+        <h2>Create Event</h2>
+        <form id="createEventForm">
+            <label for="eventName">Event Name:</label>
+            <input type="text" id="eventName" required><br><br>
+            <label for="eventDate">Event Date:</label>
+            <input type="date" id="eventDate" required><br><br>
+            <label for="eventDescription">Event Description:</label><br>
+            <textarea id="eventDescription" rows="4" required></textarea><br><br>
+            <label for="ticketPrice">Ticket Price:</label>
+            <input type="text" id="ticketPrice" required><br><br>
+            <button type="submit">Create Event</button>
+        </form>
+    </section>
+
+    <section id="buyTicketSection" class="hidden">
+        <h2>Buy Ticket</h2>
+        <form id="buyTicketForm">
+            <label for="eventNameTicket">Event Name:</label>
+            <input type="text" id="eventNameTicket" required><br><br>
+            <label for="ticketQuantity">Ticket Quantity:</label>
+            <input type="number" id="ticketQuantity" required><br><br>
+            <label for="usernameTicket">Username:</label>
+            <input type="text" id="usernameTicket" required><br><br>
+            <label for="passwordTicket">Password:</label>
+            <input type="password" id="passwordTicket" required><br><br>
+            <button type="submit">Buy Ticket</button>
+        </form>
+    </section>
+
+    <section id="viewEventsSection" class="hidden">
+        <h2>View Events</h2>
+        <table id="eventsTable">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Description</th>
+                    <th>Date</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody id="eventsList"></tbody>
+        </table>
+    </section>
+
+    <section id="promoteEventSection" class="hidden">
+        <h2>Promote Event</h2>
+        <form id="promoteEventForm">
+            <label for="eventNamePromote">Event Name:</label>
+            <input type="text" id="eventNamePromote" required><br><br>
+            <label for="promotionMessage">Promotion Message:</label><br>
+            <textarea id="promotionMessage" rows="4" required></textarea><br><br>
+            <button type="submit" id="btnPromote">Promote Event</button>
+        </form>
+    </section>
+
+    <section id="manageAttendeesSection" class="hidden">
+        <h2>Manage Attendees</h2>
+        <table id="attendeesTable">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Username</th>
+                    <th>Tickets Purchased</th>
+                </tr>
+            </thead>
+            <tbody id="attendeesList"></tbody>
+        </table>
+    </section>
+
+    <section id="viewPromotionsSection" class="hidden">
+        <h2>View Promotions</h2>
+        <table id="promotionsTable">
+            <thead>
+                <tr>
+                    <th>Event Name</th>
+                    <th>Promotion Message</th>
+                </tr>
+            </thead>
+            <tbody id="promotionsList"></tbody>
+        </table>
+    </section>
+
+    <section id="manageEventsSection" class="hidden">
+        <h2>Manage Events</h2>
+        <form id="manageEventForm">
+            <label for="eventNameManage">Event Name:</label>
+            <input type="text" id="eventNameManage" required><br><br>
+            <button type="button" id="btnFetchEvent">Fetch Event Details</button><br><br>
+            <label for="eventDateManage">Event Date:</label>
+            <input type="date" id="eventDateManage"><br><br>
+            <label for="eventDescriptionManage">Event Description:</label><br>
+            <textarea id="eventDescriptionManage" rows="4"></textarea><br><br>
+            <label for="ticketPriceManage">Ticket Price:</label>
+            <input type="text" id="ticketPriceManage"><br><br>
+            <button type="button" id="btnUpdateEvent">Update Event</button>
+            <button type="button" id="btnDeleteEvent">Delete Event</button>
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
